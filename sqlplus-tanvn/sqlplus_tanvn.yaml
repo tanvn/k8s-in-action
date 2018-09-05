@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: bic-sqlplus
+spec:
+  containers:
+  - name: sqlplus
+    image: tanvn84/oracle-client
+    command: [ "/bin/bash", "-c" ]
+    args: [ "tail -f /dev/null" ]

@@ -49,4 +49,22 @@ spec:
 $ kubectl create -f kubia-manual.yaml
 ```
 
+#### View logs
 
+```
+$ kubectl logs kubia-manual
+Kubia server starting...
+```
+Or for pods containing many containers
+
+```
+$ kubectl logs kubia-manual -c kubia
+Kubia server starting...
+```
+#### Port forward
+
+```
+$ kubectl port-forward kubia-manual 8888:8080
+... Forwarding from 127.0.0.1:8888 -> 8080
+... Forwarding from [::1]:8888 -> 8080
+```
