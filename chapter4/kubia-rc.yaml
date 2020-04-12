@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: kubia-no-selector
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: kubia
+    spec:
+      containers:
+        - name: kubia
+          image: tanvn84/kubia
+          ports:
+            - containerPort: 8080
